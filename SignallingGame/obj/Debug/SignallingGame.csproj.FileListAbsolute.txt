@@ -1,0 +1,9 @@
+c:\users\henrique\documents\visual studio 2015\Projects\SignallingGame\SignallingGame\bin\Debug\SignallingGame.exe.config
+c:\users\henrique\documents\visual studio 2015\Projects\SignallingGame\SignallingGame\obj\Debug\SignallingGame.csprojResolveAssemblyReference.cache
+c:\users\henrique\documents\visual studio 2015\Projects\SignallingGame\SignallingGame\obj\Debug\SignallingGame.Form1.resources
+c:\users\henrique\documents\visual studio 2015\Projects\SignallingGame\SignallingGame\obj\Debug\SignallingGame.Properties.Resources.resources
+c:\users\henrique\documents\visual studio 2015\Projects\SignallingGame\SignallingGame\obj\Debug\SignallingGame.csproj.GenerateResource.Cache
+C:\Users\Henrique\documents\visual studio 2015\Projects\SignallingGame\SignallingGame\bin\Debug\SignallingGame.exe
+C:\Users\Henrique\documents\visual studio 2015\Projects\SignallingGame\SignallingGame\bin\Debug\SignallingGame.pdb
+C:\Users\Henrique\documents\visual studio 2015\Projects\SignallingGame\SignallingGame\obj\Debug\SignallingGame.exe
+C:\Users\Henrique\documents\visual studio 2015\Projects\SignallingGame\SignallingGame\obj\Debug\SignallingGame.pdb
