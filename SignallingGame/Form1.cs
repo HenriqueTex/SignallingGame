@@ -23,6 +23,7 @@ namespace SignallingGame
             txtState.Text= "3";
             txtSignals.Text = "3";
             txtInterations.Text = "100";
+            Start.Enabled = false;
 
 
         }
@@ -51,6 +52,7 @@ namespace SignallingGame
             ambiente = new Enviroment(states, signals);
             rec = new Receiver(states, signals,interations);
             send = new Sender(states, signals,interations);
+            Start.Enabled = true;
         }
 
 
@@ -71,19 +73,73 @@ namespace SignallingGame
             }
 
             
+        
             
-            
+        }
+        private void ResetColor()
+        {
+            State1.ForeColor = Color.Black;
+            State2.ForeColor = Color.Black;
+            state3.ForeColor = Color.Black;
+            signal1.ForeColor = Color.Black;
+            signal2.ForeColor = Color.Black;
+            signal3.ForeColor = Color.Black;
         }
 
         private void Start_Click(object sender, EventArgs e)
         {
+
+            ResetColor();
+
             var state = ambiente.GetEnviromentState();
             var signal = send.SignalSelect(state);
             var escolha = rec.StateSelect(signal);
 
+            switch (state)
+            {
+
+                case 0:
+                    State1.ForeColor = Color.Blue;
+                    break;
+                case 1:
+                    State2.ForeColor = Color.Blue;
+                    break;
+                case 2:
+                    state3.ForeColor = Color.Blue;
+                    break;
+            }
+
+            switch (signal)
+            {
+
+                case 0:
+                    signal1.ForeColor = Color.Red;
+                    break;
+                case 1:
+                    signal2.ForeColor = Color.Red;
+                    break;
+                case 2:
+                    signal3.ForeColor = Color.Red;
+                    break;
+            }
+
+            switch (escolha)
+            {
+
+                case 0:
+                    State1.ForeColor = Color.Green;
+                    break;
+                case 1:
+                    State2.ForeColor = Color.Green;
+                    break;
+                case 2:
+                    state3.ForeColor = Color.Green;
+                    break;
+            }
+
             if (state == escolha)
             {
-                MessageBox.Show("Correto");
+                MessageBox.Show(state.ToString()+" "+ signal + " "+ escolha);
                 send.AddValue(state,signal);
                 rec.AddValue(signal, escolha);
             }

@@ -18,9 +18,9 @@ namespace SignallingGame
             this.quantityStates = states;
             this.boxStates = new int[states+interations, signals+interations];
 
-            for (var i = 0; i < signals; i++)
+            for (var i = 0; i < states; i++)
             {
-                for (var j = 0; i < states; i++)
+                for (var j = 0; j < signals; j++)
                 {
                     this.boxStates[i, j] = j;
                 }

@@ -20,7 +20,7 @@ namespace SignallingGame
 
             for (var i = 0; i<states ; i++)
             {
-                for (int j = 1; i < signals; i++)
+                for (int j = 1; j < signals; j++)
                 {
                     this.boxSignal[i, j] = Convert.ToInt32(j);
                 }

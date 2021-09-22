@@ -35,7 +35,7 @@ namespace SignallingGame
         public int GetEnviromentState()
         {
             Random randNum = new Random();
-            return enviromentListStates[randNum.Next(0, enviromentListStates.Count - 1)];
+            return enviromentListStates[randNum.Next(0, enviromentListStates.Count )];
         }
     }
 }

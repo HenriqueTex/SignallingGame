@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.State1 = new System.Windows.Forms.Label();
             this.saveConfig = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtState = new System.Windows.Forms.TextBox();
@@ -40,43 +37,22 @@
             this.txtInterations = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.Start = new System.Windows.Forms.Button();
+            this.State2 = new System.Windows.Forms.Label();
+            this.state3 = new System.Windows.Forms.Label();
+            this.signal1 = new System.Windows.Forms.Label();
+            this.signal2 = new System.Windows.Forms.Label();
+            this.signal3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // State1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(182, 136);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Estado A";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(370, 136);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Estado A";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(539, 136);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Estado A";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(726, 136);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Estado A";
+            this.State1.AutoSize = true;
+            this.State1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.State1.Location = new System.Drawing.Point(182, 136);
+            this.State1.Name = "State1";
+            this.State1.Size = new System.Drawing.Size(124, 31);
+            this.State1.TabIndex = 0;
+            this.State1.Text = "Estado A";
             // 
             // saveConfig
             // 
@@ -138,7 +114,7 @@
             // 
             // Start
             // 
-            this.Start.Location = new System.Drawing.Point(394, 337);
+            this.Start.Location = new System.Drawing.Point(16, 412);
             this.Start.Name = "Start";
             this.Start.Size = new System.Drawing.Size(75, 23);
             this.Start.TabIndex = 11;
@@ -146,11 +122,66 @@
             this.Start.UseVisualStyleBackColor = true;
             this.Start.Click += new System.EventHandler(this.Start_Click);
             // 
+            // State2
+            // 
+            this.State2.AutoSize = true;
+            this.State2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.State2.Location = new System.Drawing.Point(438, 136);
+            this.State2.Name = "State2";
+            this.State2.Size = new System.Drawing.Size(124, 31);
+            this.State2.TabIndex = 12;
+            this.State2.Text = "Estado B";
+            // 
+            // state3
+            // 
+            this.state3.AutoSize = true;
+            this.state3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.state3.Location = new System.Drawing.Point(672, 136);
+            this.state3.Name = "state3";
+            this.state3.Size = new System.Drawing.Size(126, 31);
+            this.state3.TabIndex = 13;
+            this.state3.Text = "Estado C";
+            // 
+            // signal1
+            // 
+            this.signal1.AutoSize = true;
+            this.signal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.signal1.Location = new System.Drawing.Point(182, 361);
+            this.signal1.Name = "signal1";
+            this.signal1.Size = new System.Drawing.Size(96, 31);
+            this.signal1.TabIndex = 14;
+            this.signal1.Text = "Sinal 1";
+            // 
+            // signal2
+            // 
+            this.signal2.AutoSize = true;
+            this.signal2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.signal2.Location = new System.Drawing.Point(438, 361);
+            this.signal2.Name = "signal2";
+            this.signal2.Size = new System.Drawing.Size(96, 31);
+            this.signal2.TabIndex = 15;
+            this.signal2.Text = "Sinal 2";
+            // 
+            // signal3
+            // 
+            this.signal3.AutoSize = true;
+            this.signal3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.signal3.Location = new System.Drawing.Point(672, 361);
+            this.signal3.Name = "signal3";
+            this.signal3.Size = new System.Drawing.Size(96, 31);
+            this.signal3.TabIndex = 16;
+            this.signal3.Text = "Sinal 3";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1045, 519);
+            this.Controls.Add(this.signal3);
+            this.Controls.Add(this.signal2);
+            this.Controls.Add(this.signal1);
+            this.Controls.Add(this.state3);
+            this.Controls.Add(this.State2);
             this.Controls.Add(this.Start);
             this.Controls.Add(this.txtInterations);
             this.Controls.Add(this.label7);
@@ -159,10 +190,7 @@
             this.Controls.Add(this.txtState);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.saveConfig);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.State1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -172,10 +200,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label State1;
         private System.Windows.Forms.Button saveConfig;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtState;
@@ -184,6 +209,11 @@
         private System.Windows.Forms.TextBox txtInterations;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button Start;
+        private System.Windows.Forms.Label State2;
+        private System.Windows.Forms.Label state3;
+        private System.Windows.Forms.Label signal1;
+        private System.Windows.Forms.Label signal2;
+        private System.Windows.Forms.Label signal3;
     }
 }
 
