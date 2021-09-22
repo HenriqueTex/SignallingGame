@@ -12,13 +12,25 @@ namespace SignallingGame
 {
     public partial class Form1 : Form
     {
+        Enviroment ambiente;
+        Receiver rec;
+        Sender send;
+
+
         public Form1()
         {
             InitializeComponent();
+            txtState.Text= "3";
+            txtSignals.Text = "3";
+            txtInterations.Text = "100";
+
+
         }
-        private void verifyConfig(int state, int signals, int interations)
+
+
+        private void verifyConfig(int states, int signals, int interations)
         {
-            if (state == 0 || signals == 0 || interations == 0)
+            if (states <= 0 || signals <= 0 || interations <= 0)
             {
                 MessageBox.Show("Atenção, os campos devem apresentar valor maior que 0",
                            "Aviso",
@@ -28,14 +40,26 @@ namespace SignallingGame
             }
             else
             {
-                MessageBox.Show("Configurações corretas");
+                initializeWorld(states,signals,interations);
             }
         }
-        private void button1_Click(object sender, EventArgs e)
+
+
+
+        private void initializeWorld(int states, int signals, int interations)
+        {
+            ambiente = new Enviroment(states, signals);
+            rec = new Receiver(states, signals,interations);
+            send = new Sender(states, signals,interations);
+        }
+
+
+        private void saveConfig_Click(object sender, EventArgs e)
         {
             try
             {
                 verifyConfig(Convert.ToInt32(txtState.Text), Convert.ToInt32(txtSignals.Text), Convert.ToInt32(txtInterations.Text));
+                
             }
             catch (System.FormatException)
             {
@@ -46,12 +70,13 @@ namespace SignallingGame
                            MessageBoxDefaultButton.Button1);
             }
 
-            var states = 3;
-            var signals = 3;
-            Enviroment ambiente = new Enviroment(states, signals);
-            Receiver rec = new Receiver(states, signals);
-            Sender send = new Sender(states, signals);
+            
+            
+            
+        }
 
+        private void Start_Click(object sender, EventArgs e)
+        {
             var state = ambiente.GetEnviromentState();
             var signal = send.SignalSelect(state);
             var escolha = rec.StateSelect(signal);
@@ -59,14 +84,9 @@ namespace SignallingGame
             if (state == escolha)
             {
                 MessageBox.Show("Correto");
+                send.AddValue(state,signal);
+                rec.AddValue(signal, escolha);
             }
-        }
-
-
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

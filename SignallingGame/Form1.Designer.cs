@@ -32,13 +32,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.saveConfig = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtState = new System.Windows.Forms.TextBox();
             this.txtSignals = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtInterations = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.Start = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -77,15 +78,15 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Estado A";
             // 
-            // button1
+            // saveConfig
             // 
-            this.button1.Location = new System.Drawing.Point(373, 309);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(223, 74);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.saveConfig.Location = new System.Drawing.Point(690, 14);
+            this.saveConfig.Name = "saveConfig";
+            this.saveConfig.Size = new System.Drawing.Size(106, 37);
+            this.saveConfig.TabIndex = 4;
+            this.saveConfig.Text = "Save";
+            this.saveConfig.UseVisualStyleBackColor = true;
+            this.saveConfig.Click += new System.EventHandler(this.saveConfig_Click);
             // 
             // label5
             // 
@@ -109,7 +110,6 @@
             this.txtSignals.Name = "txtSignals";
             this.txtSignals.Size = new System.Drawing.Size(189, 20);
             this.txtSignals.TabIndex = 8;
-            this.txtSignals.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label6
             // 
@@ -136,18 +136,29 @@
             this.label7.TabIndex = 9;
             this.label7.Text = "Quantidade de iterações";
             // 
+            // Start
+            // 
+            this.Start.Location = new System.Drawing.Point(394, 337);
+            this.Start.Name = "Start";
+            this.Start.Size = new System.Drawing.Size(75, 23);
+            this.Start.TabIndex = 11;
+            this.Start.Text = "start";
+            this.Start.UseVisualStyleBackColor = true;
+            this.Start.Click += new System.EventHandler(this.Start_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1045, 519);
+            this.Controls.Add(this.Start);
             this.Controls.Add(this.txtInterations);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtSignals);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtState);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.saveConfig);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -165,13 +176,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button saveConfig;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtState;
         private System.Windows.Forms.TextBox txtSignals;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtInterations;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button Start;
     }
 }
 

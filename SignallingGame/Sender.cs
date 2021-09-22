@@ -12,11 +12,11 @@ namespace SignallingGame
         public int quantityStates;
         public int quantitySignals;
 
-        public Sender(int states, int signals)
+        public Sender(int states, int signals,int interations)
         {
             this.quantitySignals = signals;
             this.quantityStates = states;
-            this.boxStates = new int[states, signals];
+            this.boxStates = new int[states+interations, signals+interations];
 
             for (var i = 0; i < signals; i++)
             {
@@ -27,10 +27,16 @@ namespace SignallingGame
             }
         }
 
-        public int SignalSelect(int signal)
+        public int SignalSelect(int estate)
         {
             Random randNum = new Random();
-            return boxStates[signal, randNum.Next(0, quantitySignals)];
+            return boxStates[estate, randNum.Next(0, quantitySignals)];
+        }
+
+        public void AddValue(int state,int signal)
+        {
+            quantitySignals++;
+            boxStates[state, quantitySignals] = signal;
         }
 
     }
